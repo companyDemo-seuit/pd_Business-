@@ -14,7 +14,7 @@
         </view>
     </uni-nav-bar>
     <view class="swbg" style="padding-top:20px;padding-bottom:40px;">
-        <media-list :options=" newsitem" @close="close(index1,index2)">
+        <media-list :options="newsitem" @close="close(index1,index2)">
         </media-list>
 
     </view>
@@ -33,16 +33,30 @@ export default {
     data() {
         return {
             city: '北京',
-            newsitem: {
-                "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg?imageView2/3/w/200/h/100/q/90",
-                "datetime": "40分钟前",
-                "distance": 0,
-                "title": "万达五金",
-                "about": "封阳台、纱窗、移门、封阳台、纱窗、移门、封阳台、纱窗、移门",
-                "star": 4,
-                "rate": "4.9分",
-                "comment_count": 0
-            },
+            newsitem: [{
+                "numName": '2号',
+                "Invalid": false,
+                "content": '等待处理',
+                "datetime": "09-07 13:00",
+                "clientName": '白女士',
+                "phone": 15157364991,
+                "adress": "万达三期1-301",
+                "orderContent": '纱窗、阳台',
+                "orderContentFee": 2000,
+                "otherFee": 20,
+            }, {
+                "numName": '1号',
+                "Invalid": true,
+                "content": '订单已无效',
+                "datetime": "09-07 13:00",
+                "clientName": '白女士',
+                "phone": 15157364991,
+                "adress": "万达三期1-301",
+                "orderContent": '纱窗、阳台',
+                "orderContentFee": 2000,
+                "otherFee": 20,
+
+            }, ]
         }
     },
     onLoad(e) {
@@ -56,36 +70,36 @@ export default {
             });
         },
         showCity() {
-          uni.showToast({
-            title: '选择城市'
-          });
+            uni.showToast({
+                title: '选择城市'
+            });
         },
         scan() {
-          uni.showToast({
-            title: '扫码'
-          });
+            uni.showToast({
+                title: '扫码'
+            });
         },
 
         test_get() {
-          this.$request({
-              url: '/admin/get_product_list',
-              data: {
-                a: 1
-              }
-            }, 'GET')
-            .then(res => {
-              // this.city = res
-              console.log(res);
-            });
+            this.$request({
+                    url: '/admin/get_product_list',
+                    data: {
+                        a: 1
+                    }
+                }, 'GET')
+                .then(res => {
+                    // this.city = res
+                    console.log(res);
+                });
         },
         test_post() {
-          // 基本同GET
-          this.$request({
-    				url: '/admin/get_product_list'
-    			}, 'POST')
-            .then(res => {
-              console.log(res);
-            });
+            // 基本同GET
+            this.$request({
+                    url: '/admin/get_product_list'
+                }, 'POST')
+                .then(res => {
+                    console.log(res);
+                });
         }
 
     }
@@ -100,9 +114,8 @@ export default {
     background-size:100%
 } */
 
-
-
 /* 搜索框 */
+
 .city {
     display: flex;
     flex-direction: row;
