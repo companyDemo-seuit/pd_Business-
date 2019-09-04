@@ -39,7 +39,9 @@
 .uni-media-list {
     padding: 27px  0 15px 25px!important;
 }
-
+.uni-msg-list {
+    padding: 0  0 0 15px;
+}
 .uni-scroll-view {
     /* background: #3193ba; */
 }

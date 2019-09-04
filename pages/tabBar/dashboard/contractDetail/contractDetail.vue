@@ -1,6 +1,6 @@
 <template>
 <view class="example listBg">
-    <view style="padding-top:20px;padding-bottom:40px;"">
+    <view style="padding-top:20px;padding-bottom:40px;">
         <media-list :options=" newsitem" @close="close(index1,index2)">
         </media-list>
 
@@ -93,7 +93,7 @@
 </view>
 </template>
 <script>
-import mediaList from '@/components/tab-nvue/mediaList.vue';
+import mediaList from '@/components/tab-nvue/orderList.vue';
 export default {
     components: {
         mediaList

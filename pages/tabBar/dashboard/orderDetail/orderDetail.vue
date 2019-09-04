@@ -1,7 +1,7 @@
 <template>
 <view class="example listBg">
 
-    <view style="padding-top:20px;padding-bottom:40px;"">
+    <view style="padding-top:20px;padding-bottom:40px;">
     <view class="" style=" display:flex;width: 100%;">
 
         <view class="" style="flex:1;display: flex;align-items: center; justify-content: center; " @click="swiper_index = 0">
@@ -34,7 +34,7 @@
 </view>
 </template>
 <script>
-import mediaList from '@/components/tab-nvue/mediaList.vue';
+import mediaList from '@/components/tab-nvue/orderList.vue';
 import uniSteps from '@/components/uni-steps/uni-steps.vue'
 export default {
     components: {

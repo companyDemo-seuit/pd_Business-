@@ -1,19 +1,13 @@
 <template>
 <view class="example ">
 
-    <uni-nav-bar :fixed="false" color="#333333" background-color="#FFFFFF" right-icon="scan" @click-left="showCity" @click-right="scan">
-        <block slot="left">
-            <view class="city">
-                <view>{{ city }}</view>
-                <uni-icon type="arrowdown" color="#333333" size="22" />
+    <uni-nav-bar :fixed="false" color="#333333" background-color="#FFFFFF"  @click-left="showCity" @click-right="scan">
+        <block slot="right">
+            <view class="">
             </view>
         </block>
-        <view class="input-view">
-            <uni-icon type="search" size="22" color="#666666" />
-            <input confirm-type="search" class="input" type="text" placeholder="输入搜索关键词" @confirm="confirm" />
-        </view>
     </uni-nav-bar>
-    <view class="swbg" style="padding-top:20px;padding-bottom:40px;">
+    <view class="" style="padding-top:20px;padding-bottom:40px;">
         <media-list :options="newsitem" @close="close(index1,index2)">
         </media-list>
 
@@ -44,6 +38,7 @@ export default {
                 "orderContent": '纱窗、阳台',
                 "orderContentFee": 2000,
                 "otherFee": 20,
+                "totleFee": 2020,
             }, {
                 "numName": '1号',
                 "Invalid": true,
@@ -55,6 +50,7 @@ export default {
                 "orderContent": '纱窗、阳台',
                 "orderContentFee": 2000,
                 "otherFee": 20,
+                "totleFee": 2020,
 
             }, ]
         }
